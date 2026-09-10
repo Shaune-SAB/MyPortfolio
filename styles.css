@@ -104,7 +104,8 @@ nav.menu-links {
   justify-content: center;
   align-items: center;
   padding: 0.6rem 1rem;
-  gap: 12px;
+  gap: 10px;
+  flex-wrap: wrap;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
@@ -113,8 +114,8 @@ nav.menu-links a {
   color: #f1f5f9;
   text-decoration: none;
   font-weight: 600;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.05);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -139,10 +140,10 @@ nav.menu-links a.active {
 
 /* Compact Toggle Button (Positioned on LEFT when collapsed) */
 .nav-toggle-btn {
-  display: none; /* Hidden by default on desktop until scrolled */
+  display: none;
   position: fixed;
   top: 15px;
-  left: 20px; /* Switched to left side */
+  left: 20px;
   z-index: 1001;
   width: 44px;
   height: 44px;
@@ -192,14 +193,14 @@ body.scrolled-mode .nav-container {
 }
 
 body.scrolled-mode .nav-toggle-btn {
-  display: flex; /* Show 3-toggle box on scroll */
+  display: flex;
 }
 
 /* Collapsed menu dropdown state (Positioned on LEFT) */
 body.scrolled-mode nav.menu-links {
   position: fixed;
   top: 70px;
-  left: 20px; /* Switched to left side */
+  left: 20px;
   background-color: var(--primary);
   flex-direction: column;
   align-items: stretch;
@@ -419,8 +420,8 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile Screen Support (< 680px) */
-@media (max-width: 680px) {
+/* Tablet & Mobile Screen Support (< 850px) */
+@media (max-width: 850px) {
   header {
     padding: 2rem 1rem;
   }
@@ -436,7 +437,7 @@ footer {
   nav.menu-links {
     position: fixed;
     top: 70px;
-    left: 20px; /* Switched to left side for mobile */
+    left: 20px;
     background-color: var(--primary);
     flex-direction: column;
     align-items: stretch;

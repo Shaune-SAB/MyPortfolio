@@ -315,6 +315,51 @@ ul.item-bullets li {
   margin-bottom: 0.4rem;
 }
 
+/* ===================================================
+   COLLAPSIBLE PDF SUB-BOX STYLING
+   =================================================== */
+
+.pdf-subbox {
+  background-color: #f8fafc;
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  margin-top: 1rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.pdf-subbox[open] {
+  border-color: var(--accent);
+}
+
+.pdf-toggle-btn {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
+  cursor: pointer;
+  user-select: none;
+  background-color: #f1f5f9;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pdf-toggle-btn:hover {
+  background-color: #e2e8f0;
+  color: var(--accent-hover);
+}
+
+.pdf-container {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-color);
+}
+
+.pdf-container object {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
 /* Form Inputs */
 form {
   display: flex;

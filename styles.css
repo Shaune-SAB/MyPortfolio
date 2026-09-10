@@ -137,12 +137,12 @@ nav.menu-links a.active {
   box-shadow: 0 4px 10px rgba(2, 132, 199, 0.4);
 }
 
-/* Compact Toggle Button (3-bar Box) */
+/* Compact Toggle Button (Positioned on LEFT when collapsed) */
 .nav-toggle-btn {
   display: none; /* Hidden by default on desktop until scrolled */
   position: fixed;
   top: 15px;
-  right: 20px;
+  left: 20px; /* Switched to left side */
   z-index: 1001;
   width: 44px;
   height: 44px;
@@ -195,11 +195,11 @@ body.scrolled-mode .nav-toggle-btn {
   display: flex; /* Show 3-toggle box on scroll */
 }
 
-/* Collapsed menu dropdown state */
+/* Collapsed menu dropdown state (Positioned on LEFT) */
 body.scrolled-mode nav.menu-links {
   position: fixed;
   top: 70px;
-  right: 20px;
+  left: 20px; /* Switched to left side */
   background-color: var(--primary);
   flex-direction: column;
   align-items: stretch;
@@ -436,7 +436,7 @@ footer {
   nav.menu-links {
     position: fixed;
     top: 70px;
-    right: 20px;
+    left: 20px; /* Switched to left side for mobile */
     background-color: var(--primary);
     flex-direction: column;
     align-items: stretch;

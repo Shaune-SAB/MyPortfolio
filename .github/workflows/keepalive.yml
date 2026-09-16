@@ -2,7 +2,7 @@ name: Daily Keepalive
 
 on:
   schedule:
-    - cron: '30 12 * * *'  # runs at 12:30 UTC daily
+    - cron: '30 12 * * *' # runs at 12:30 UTC daily
   workflow_dispatch:
 
 jobs:
@@ -12,13 +12,14 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.KEEP_ALIVE_TOKEN }}
 
       - name: Update keepalive file
         run: |
           echo "Last updated: $(date -u)" > .keepalive
           git add .keepalive
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name Shaune-SAB
+          git config user.email shaunebakasa@gmail.com
           git diff --cached --quiet || git commit -m "keepalive"
-          git push   
-          
+          git push

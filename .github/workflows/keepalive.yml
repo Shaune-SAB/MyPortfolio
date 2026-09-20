@@ -2,7 +2,7 @@ name: Daily Keepalive
 
 on:
   schedule:
-    - cron: '30 12 * * *' # runs at 12:30 UTC daily
+    - cron: '30 */6 * * *' # Runs every 6 hours at minute 30 (00:30, 06:30, 12:30, 18:30 UTC)
   workflow_dispatch:
 
 jobs:
